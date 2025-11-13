@@ -57,6 +57,13 @@ img {
     z-index: 100;
     backdrop-filter: blur(10px); 
     border-bottom: 1px solid #333333;
+    /* Animation Nav  */
+    transform: translateY(-120%);
+    transition: transform 2.9s cubic-bezier(.22,.9,.12,1);
+}
+  /* Animation Nav  */
+.header.show {
+    transform: translateY(0);
 }
 
 .nav {
@@ -144,6 +151,33 @@ img {
     object-fit: cover;
     border: 5px solid #00bcd4;
     box-shadow: 0 0 25px rgba(0, 188, 212, 0.4);
+}
+
+/* Hero section Animation */
+.hero_content, .hero_image {
+    /* start me dono ko hide krne ke liye */
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 3.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* show class active hone ke baad visible hoga  */
+.hero_content.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hero_image.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* left se aayega */
+.hero_content {
+    transform: translateX(-100px);  
+}
+ /* right se aayega */
+.hero_image {
+    transform: translateX(100px);  
 }
 
 /* Section For Multiple Style  */
@@ -280,6 +314,18 @@ img {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+/* About, Skills, Projet and contact animation animation  */
+.section {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1.5s ease-out;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer  */
