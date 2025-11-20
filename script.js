@@ -31,7 +31,7 @@
           observer.unobserve(entry.target); // ek baar animate hone ke baad band
         }
       });
-    }, { threshold: 0.25 }); // 25% visible hone par trigger
+    }, { threshold: 0.1 }); // 25% visible hone par trigger
 
     sections.forEach(section => observer.observe(section));
 });
